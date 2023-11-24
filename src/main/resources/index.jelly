@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-    This plugin provides the <a href="https://github.com/flyway/flyway">JAX-RS 2.1</a> APIs for other plugins.
+    This plugin provides the <a href="https://github.com/flyway/flyway">Flyway</a> APIs for other plugins.
 </div>
