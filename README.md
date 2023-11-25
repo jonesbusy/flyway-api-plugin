@@ -1,10 +1,9 @@
 # Jenkins Flyway API Plugin
 
 [![Build Status](https://ci.jenkins.io/job/Plugins/job/flyway-api-plugin/job/main/badge/icon)](https://ci.jenkins.io/job/Plugins/job/flyway-api-plugin/job/main/)
-[![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/flyway-api-plugin.svg)](https://plugins.jenkins.io/flyway-api-plugin)
+[![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/flyway-api.svg)](https://plugins.jenkins.io/flyway-api)
 [![GitHub release](https://img.shields.io/github/release/jenkinsci/flyway-api-plugin.svg?label=changelog)](https://github.com/jenkinsci/flyway-api-plugin/releases/latest)
 [![GitHub license](https://img.shields.io/github/license/jenkinsci/flyway-api-plugin)](https://github.com/jenkinsci/flyway-api-plugin/blob/main/LICENSE.md)
-[![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/flyway-api-plugin.svg?color=blue)](https://plugins.jenkins.io/flyway-api-plugin)
 
 Flyway API Plugin
 
