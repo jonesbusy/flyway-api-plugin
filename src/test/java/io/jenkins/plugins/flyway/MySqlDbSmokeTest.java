@@ -4,21 +4,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import org.flywaydb.core.Flyway;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 
+@WithJenkins
 public class MySqlDbSmokeTest {
 
     public static final String TEST_IMAGE = "mysql:8.2.0";
 
-    @Rule
-    public JenkinsRule r = new JenkinsRule();
-
     @Test
-    public void smokeTest() throws Exception {
+    public void smokeTest(JenkinsRule j) throws Exception {
         try (MySQLContainer<?> mysql = new MySQLContainer<>(TEST_IMAGE)) {
             mysql.start();
             mysql.waitingFor(Wait.forListeningPort());
