@@ -93,7 +93,7 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>mariadb-api</artifactId>
-      <version>3.3.0-3.v8a_a_3126704d8</version>
+      <version>3.3.2-15.vd1a_9de4ea_12b_</version>
       <scope>test</scope>
       <!-- Remove version when included on bom -->
     </dependency>
