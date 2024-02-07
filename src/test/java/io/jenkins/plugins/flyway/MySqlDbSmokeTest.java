@@ -9,8 +9,10 @@ import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 @WithJenkins
+@Testcontainers(disabledWithoutDocker = true)
 public class MySqlDbSmokeTest {
 
     public static final String TEST_IMAGE = "mysql:8.2.0";
