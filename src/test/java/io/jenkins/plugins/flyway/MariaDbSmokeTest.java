@@ -9,8 +9,10 @@ import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 import org.testcontainers.containers.MariaDBContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 @WithJenkins
+@Testcontainers(disabledWithoutDocker = true)
 public class MariaDbSmokeTest {
 
     public static final String TEST_IMAGE = "mariadb:11.2.2";

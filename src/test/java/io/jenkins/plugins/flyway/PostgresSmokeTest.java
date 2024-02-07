@@ -9,11 +9,13 @@ import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 @WithJenkins
+@Testcontainers(disabledWithoutDocker = true)
 public class PostgresSmokeTest {
 
-    public static final String TEST_IMAGE = "postgres:16-alpine";
+    public static final String TEST_IMAGE = "postgres:16.1";
 
     @Test
     public void smokeTest(JenkinsRule j) throws Exception {
