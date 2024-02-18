@@ -99,6 +99,14 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-mysql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-sqlserver</artifactId>
+    </dependency>
 
     <!-- Test dependencies -->
     <dependency>
@@ -121,16 +129,6 @@
       <artifactId>sqlserver-api</artifactId>
       <version>1.1.1</version>
       <!-- On bom ? -->
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-mysql</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-sqlserver</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
