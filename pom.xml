@@ -127,8 +127,6 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>sqlserver-api</artifactId>
-      <version>12.6.1.jre11-25.v79e8e836039f</version>
-      <!-- On bom ? -->
       <scope>test</scope>
     </dependency>
     <dependency>
