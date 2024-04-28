@@ -26,15 +26,11 @@
     <url>https://github.com/${gitHubRepo}</url>
   </scm>
   <properties>
-    <revision>10.11.1</revision>
+    <revision>9.22.3</revision>
     <changelist>999999-SNAPSHOT</changelist>
     <jenkins.version>2.414.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     <spotless.check.skip>false</spotless.check.skip>
-
-    <!-- Due to flyway 10 core requiring minimum 17 -->
-    <maven.compiler.release>17</maven.compiler.release>
-    <maven.compiler.testRelease>17</maven.compiler.testRelease>
 
     <!-- Test dependencies version -->
     <testcontainer.version>1.19.7</testcontainer.version>
@@ -67,11 +63,6 @@
         <artifactId>flyway-commandline</artifactId>
         <version>${revision}</version>
         <type>zip</type>
-      </dependency>
-      <dependency>
-        <groupId>org.flywaydb</groupId>
-        <artifactId>flyway-database-postgresql</artifactId>
-        <version>${revision}</version>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>
@@ -110,10 +101,6 @@
     </dependency>
     <dependency>
       <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-database-postgresql</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.flywaydb</groupId>
       <artifactId>flyway-mysql</artifactId>
     </dependency>
     <dependency>
@@ -121,10 +108,6 @@
       <artifactId>flyway-sqlserver</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>jackson2-api</artifactId>
-    </dependency>
     <!-- Test dependencies -->
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
