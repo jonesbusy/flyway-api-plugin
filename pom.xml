@@ -28,7 +28,8 @@
   <properties>
     <revision>9.22.3</revision>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.426.3</jenkins.version>
+    <jenkins.baseline>2.440</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     <spotless.check.skip>false</spotless.check.skip>
 
@@ -41,16 +42,10 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.426.x</artifactId>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
         <version>3193.v330d8248d39e</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-      <!-- Remove when included on jenkins core -->
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-compress</artifactId>
-        <version>1.26.2</version>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>
