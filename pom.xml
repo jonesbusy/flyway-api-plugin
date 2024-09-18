@@ -26,15 +26,20 @@
     <url>https://github.com/${gitHubRepo}</url>
   </scm>
   <properties>
-    <revision>9.22.3</revision>
+    <revision>10.18.0</revision>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.baseline>2.440</jenkins.baseline>
-    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
+    <jenkins.baseline>2.462</jenkins.baseline>
+    <!-- TODO Replace with the standard jenkins.baseline references after LTS requires Java 17  -->
+    <!-- <jenkins.version>${jenkins.baseline}.1</jenkins.version> -->
+    <jenkins.version>2.463</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     <spotless.check.skip>false</spotless.check.skip>
 
     <!-- Test dependencies version -->
     <testcontainer.version>1.20.1</testcontainer.version>
+
+    <!-- TODO JENKINS-73339 until in parent POM -->
+    <maven.compiler.release>17</maven.compiler.release>
 
   </properties>
 
@@ -58,6 +63,11 @@
         <artifactId>flyway-commandline</artifactId>
         <version>${revision}</version>
         <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-database-postgresql</artifactId>
+        <version>${revision}</version>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>
@@ -89,6 +99,10 @@
           <artifactId>jackson-dataformat-toml</artifactId>
         </exclusion>
         <exclusion>
+          <groupId>com.fasterxml.jackson.datatype</groupId>
+          <artifactId>jackson-datatype-jsr310</artifactId>
+        </exclusion>
+        <exclusion>
           <groupId>com.google.code.gson</groupId>
           <artifactId>gson</artifactId>
         </exclusion>
@@ -96,11 +110,20 @@
     </dependency>
     <dependency>
       <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-database-postgresql</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.flywaydb</groupId>
       <artifactId>flyway-mysql</artifactId>
     </dependency>
     <dependency>
       <groupId>org.flywaydb</groupId>
       <artifactId>flyway-sqlserver</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>jackson2-api</artifactId>
     </dependency>
 
     <!-- Test dependencies -->
