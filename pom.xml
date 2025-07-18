@@ -50,18 +50,6 @@
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>
-        <artifactId>flyway-commandline</artifactId>
-        <version>${revision}</version>
-        <type>tar.gz</type>
-      </dependency>
-      <dependency>
-        <groupId>org.flywaydb</groupId>
-        <artifactId>flyway-commandline</artifactId>
-        <version>${revision}</version>
-        <type>zip</type>
-      </dependency>
-      <dependency>
-        <groupId>org.flywaydb</groupId>
         <artifactId>flyway-database-postgresql</artifactId>
         <version>${revision}</version>
       </dependency>
