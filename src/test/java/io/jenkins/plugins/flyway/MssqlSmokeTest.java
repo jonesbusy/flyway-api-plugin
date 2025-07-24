@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 import org.testcontainers.containers.MSSQLServerContainer;
@@ -15,9 +17,10 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers(disabledWithoutDocker = true)
 public class MssqlSmokeTest {
 
-    public static final String TEST_IMAGE = "mcr.microsoft.com/mssql/server:2022-latest";
+    public static final String TEST_IMAGE = "mcr.microsoft.com/mssql/server:2025-latest";
 
     @Test
+    @EnabledOnOs(OS.LINUX) // No ARM64 images on CI
     public void smokeTest(JenkinsRule j) throws Exception {
         try (MSSQLServerContainer<?> mssql = new MSSQLServerContainer<>(TEST_IMAGE)) {
             mssql.acceptLicense();
