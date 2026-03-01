@@ -26,10 +26,10 @@
     <url>https://github.com/${gitHubRepo}</url>
   </scm>
   <properties>
-    <revision>12.0.2</revision>
+    <revision>12.0.3</revision>
     <changelist>999999-SNAPSHOT</changelist>
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-    <jenkins.baseline>2.479</jenkins.baseline>
+    <jenkins.baseline>2.516</jenkins.baseline>
     <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     <spotless.check.skip>false</spotless.check.skip>
@@ -48,7 +48,7 @@
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-${jenkins.baseline}.x</artifactId>
-        <version>5054.v620b_5d2b_d5e6</version>
+        <version>6098.v29a_dff8a_0c19</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -74,6 +74,10 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>gson-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>jackson3-api</artifactId>
     </dependency>
 
     <!-- Dependencies -->
@@ -112,10 +116,6 @@
     <dependency>
       <groupId>org.flywaydb</groupId>
       <artifactId>flyway-sqlserver</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>jackson2-api</artifactId>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
